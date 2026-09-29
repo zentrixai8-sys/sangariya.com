@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  --font-exotic: 'Cinzel Decorative', cursive, serif;
+  --font-italiana: 'Italiana', serif;
+  --font-marcellus: 'Marcellus', serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --color-gold-50: #fdfbf2;
+  --color-gold-100: #faf3d4;
+  --color-gold-200: #f4e5a8;
+  --color-gold-300: #ebd176;
+  --color-gold-400: #e2be42;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #a9851f;
+  --color-sangria-950: #1a0408;
+  --color-sangria-900: #30060e;
+  --color-sangria-800: #540c1a;
+  --color-sangria-700: #821428;
+  --color-sangria-600: #aa1c36;
+  --color-sangria-500: #d32847;
+  --color-obsidian: #0e070a;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0d070a;
+  color: #f7f3ec;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.18), transparent 45%),
+    radial-gradient(circle at 10% 25%, rgba(170, 28, 54, 0.22), transparent 40%),
+    radial-gradient(circle at 90% 45%, rgba(212, 175, 55, 0.15), transparent 45%),
+    radial-gradient(circle at 30% 75%, rgba(130, 20, 40, 0.20), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(245, 215, 127, 0.14), transparent 35%);
+  background-attachment: fixed;
+}
+
+.font-exotic {
+  font-family: var(--font-exotic);
+}
+
+.font-italiana {
+  font-family: var(--font-italiana);
+}
+
+.font-marcellus {
+  font-family: var(--font-marcellus);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Exotic Metallic Shimmer Text */
+.text-shimmer-gold {
+  background: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 25%,
+    #b38728 50%,
+    #fbf5b7 75%,
+    #aa771c 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shineGold 4s linear infinite;
+}
+
+.text-shimmer-ruby {
+  background: linear-gradient(
+    135deg,
+    #ff6b81 0%,
+    #ffd1d8 25%,
+    #e8415d 50%,
+    #ffffff 75%,
+    #d32847 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shineGold 5s linear infinite;
+}
+
+@keyframes shineGold {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Ambient Lighting & Glow Animations */
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.15) translate(10px, -15px);
+  }
+}
+
+@keyframes floatLight {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.animate-ambient-pulse {
+  animation: ambientPulse 7s ease-in-out infinite;
+}
+
+.animate-float-light {
+  animation: floatLight 6s ease-in-out infinite;
+}
+
+.glow-box-gold {
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.35), 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.glow-box-ruby {
+  box-shadow: 0 0 40px -5px rgba(211, 40, 71, 0.4), 0 0 15px rgba(211, 40, 71, 0.25);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 20px rgba(245, 238, 208, 0.6), 0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+.glow-text-exotic {
+  text-shadow: 0 0 25px rgba(255, 215, 110, 0.7), 0 0 50px rgba(211, 40, 71, 0.5);
+}
+
+/* Glassmorphism with golden rim */
+.glass-luxe {
+  background: linear-gradient(135deg, rgba(48, 6, 14, 0.7) 0%, rgba(20, 4, 8, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-luxe-glow {
+  background: linear-gradient(135deg, rgba(60, 10, 20, 0.75) 0%, rgba(26, 4, 8, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 229, 168, 0.35);
+  box-shadow: 0 10px 40px 0 rgba(170, 28, 54, 0.25), 0 0 25px rgba(212, 175, 55, 0.2), inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0d070a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d4af37, #821428);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd76e;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Sangria Restro & Bar",
+  "description": "An exotic high-premium restaurant and lounge blending artisanal Sangria pitchers and craft mixology with woodfired culinary craftsmanship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
